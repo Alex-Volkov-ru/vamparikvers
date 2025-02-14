@@ -78,9 +78,23 @@ body {
 		</style>
 		<link id="-gd-engine-icon" rel="icon" type="image/png" href="index.icon.png" />
 <link rel="apple-touch-icon" href="index.apple-touch-icon.png"/>
+<!-- Yandex Games SDK -->
+<script src="https://sdk.games.s3.yandex.net/sdk.js"></script>
+YaGames
+    .init()
+    .then(ysdk => {
+        console.log('Yandex SDK initialized');
+        window.ysdk = ysdk;
+    });
+<!-- Yandex Games SDK -->
+<script src="/sdk.js"></script>
+<script>
+    YaGames.init().then(ysdk => {
+        // ...
+    });
+</script>
 
-	<div id="responsive-banner-container" hidden="hidden" style="width: 728px; height: 90px; position: fixed; bottom:0; z-index:9999"></div><script src="webbus_sdk.js"></script>
-</head>
+	</head>
 	<body>
 		<canvas id="canvas">
 			Your browser does not support the canvas tag.
@@ -98,7 +112,7 @@ body {
 
 		<script src="index.js"></script>
 		<script>
-const GODOT_CONFIG = {"args":[],"canvasResizePolicy":2,"ensureCrossOriginIsolationHeaders":true,"executable":"index","experimentalVK":false,"fileSizes":{"index.pck":38686256,"index.wasm":43016933},"focusCanvas":true,"gdextensionLibs":[]};
+const GODOT_CONFIG = {"args":[],"canvasResizePolicy":2,"ensureCrossOriginIsolationHeaders":true,"executable":"index","experimentalVK":false,"fileSizes":{"index.pck":32448544,"index.wasm":43016933},"focusCanvas":true,"gdextensionLibs":[]};
 const GODOT_THREADS_ENABLED = false;
 const engine = new Engine(GODOT_CONFIG);
 
